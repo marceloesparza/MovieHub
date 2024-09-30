@@ -1,0 +1,20 @@
+<h1>Nueva Pelicula</h1>
+
+
+<%= form_with model: @movie, local:true do |f| %>
+    <div class="field">
+        <%=f.label :name %>
+        <%=f.text_field :name %>
+    </div>    
+    <div class="field">
+        <%=f.label :synopsis %>
+        <%=f.text_field :synopsis %>
+    </div>    
+    <div class="field">
+        <%=f.label :director %>
+        <%=f.text_field :director %>
+    </div>    
+    <div class="actions">
+        <%= f.submit %>
+    </div>
+<% end %>

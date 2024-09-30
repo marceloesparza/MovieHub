@@ -1,0 +1,22 @@
+<h1>Movies</h1>
+<%= link_to "Nueva Pelicula", new_movie_path %> |
+<%= link_to "Series", serie_tvs_path %> |
+<%= link_to "Documentales", documentary_films_path %>
+<table>
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Synopsis</th>
+            <th>Director</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @movies.each do |m| %>
+            <tr>
+                <td><%=m.name%></td>
+                <td><%=m.synopsis%></td>
+                <td><%=m.director%></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

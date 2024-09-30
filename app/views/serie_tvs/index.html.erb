@@ -1,0 +1,23 @@
+<h1>Series</h1>
+<%=link_to "Agregar Series", new_serie_tv_path %>
+<%=link_to "Peliculas", movies_path %>
+<%=link_to "Documentales", documentary_films_path %>
+
+<table>
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Synopsis</th>
+            <th>Director</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @serietvs.each do |s| %>
+            <tr>
+                <td><%=s.name%></td>
+                <td><%=s.synopsis%></td>
+                <td><%=s.director%></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

@@ -1,0 +1,23 @@
+<h1>Documentales</h1>
+<%=link_to "Agregar nuevo documental", new_documentary_film_path %>
+<%=link_to "Peliculas", movies_path %>
+<%=link_to "Series", serie_tvs_path %>
+
+<table>
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Synopsis</th>
+            <th>Director</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @documentaryfilms.each do |d| %>
+            <tr>
+                <td><%=d.name%></td>
+                <td><%=d.synopsis%></td>
+                <td><%=d.director%></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

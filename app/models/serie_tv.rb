@@ -1,0 +1,2 @@
+class SerieTv < ApplicationRecord
+end
